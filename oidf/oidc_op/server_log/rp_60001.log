@@ -1,0 +1,567 @@
+2018-12-20 16:06:22,194 root:INFO construct_app_args
+2018-12-20 16:06:22,307 cherrypy.error:INFO [20/Dec/2018:16:06:22] ENGINE Bus STARTING
+2018-12-20 16:06:22,307 cherrypy.error:INFO [20/Dec/2018:16:06:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 16:06:27,336 cherrypy.error:ERROR [20/Dec/2018:16:06:27] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fd5cbe658d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60001 not free on '0.0.0.0'
+
+2018-12-20 16:06:27,336 cherrypy.error:ERROR [20/Dec/2018:16:06:27] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60001 not free on '0.0.0.0'")
+
+2018-12-20 16:06:27,337 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE Bus STOPPING
+2018-12-20 16:06:27,337 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60001)) already shut down
+2018-12-20 16:06:27,337 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 16:06:27,337 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE Bus STOPPED
+2018-12-20 16:06:27,338 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE Bus EXITING
+2018-12-20 16:06:27,338 cherrypy.error:INFO [20/Dec/2018:16:06:27] ENGINE Bus EXITED
+2018-12-20 16:07:27,374 root:INFO construct_app_args
+2018-12-20 16:07:27,626 cherrypy.error:INFO [20/Dec/2018:16:07:27] ENGINE Bus STARTING
+2018-12-20 16:07:27,627 cherrypy.error:INFO [20/Dec/2018:16:07:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 16:07:27,849 cherrypy.error:INFO [20/Dec/2018:16:07:27] ENGINE Serving on https://0.0.0.0:60001
+2018-12-20 16:07:27,850 cherrypy.error:INFO [20/Dec/2018:16:07:27] ENGINE Bus STARTED
+2018-12-20 16:07:27,892 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:27] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:27,958 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:07:27,959 cherrypy.error.139999127032944:INFO [20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:07:27,960 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:27] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:27,961 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:07:27,961 cherrypy.error.139999127032944:INFO [20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:07:27,962 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:27] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:27,962 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:07:27,963 cherrypy.error.139999127032944:INFO [20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:07:27,974 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 16:07:27,974 cherrypy.error.139999127032944:INFO [20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 16:07:28,219 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:28] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:28,228 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:28] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:28,288 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:07:28,288 cherrypy.error.139999127032944:INFO [20/Dec/2018:16:07:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:07:28,289 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:28] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:29,551 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:29] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:07:35,878 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-UserInfo-Body']
+2018-12-20 16:07:36,045 oidctest.optt:ERROR [run] ExcList: Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+2018-12-20 16:07:36,045 oidctest.optt:ERROR [run] Exception: 'client_id'
+2018-12-20 16:07:36,045 cherrypy.error.139999127032944:ERROR [20/Dec/2018:16:07:36] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/lib/encoding.py", line 220, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 112, in run
+    self.tester.conv.events.store(EV_FAULT, _trace)
+AttributeError: 'NoneType' object has no attribute 'events'
+2018-12-20 16:07:36,055 cherrypy.access.139999127032944:INFO 127.0.0.1 - - [20/Dec/2018:16:07:36] "GET /OP-UserInfo-Body HTTP/1.1" 500 823 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:46,510 root:INFO construct_app_args
+2018-12-20 16:19:46,660 cherrypy.error:INFO [20/Dec/2018:16:19:46] ENGINE Bus STARTING
+2018-12-20 16:19:46,661 cherrypy.error:INFO [20/Dec/2018:16:19:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 16:19:46,787 cherrypy.error:INFO [20/Dec/2018:16:19:46] ENGINE Serving on https://0.0.0.0:60001
+2018-12-20 16:19:46,788 cherrypy.error:INFO [20/Dec/2018:16:19:46] ENGINE Bus STARTED
+2018-12-20 16:19:51,501 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,536 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:19:51,537 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:19:51,538 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,539 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:19:51,539 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:19:51,540 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,545 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:19:51,545 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:19:51,546 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:19:51,546 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:19:51,547 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,547 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,560 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 16:19:51,560 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 16:19:51,560 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:19:51,589 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:19:51] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:20:05,543 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-UserInfo-Endpoint']
+2018-12-20 16:20:05,583 oidctest.optt:ERROR [run] ExcList: Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+2018-12-20 16:20:05,583 oidctest.optt:ERROR [run] Exception: 'client_id'
+2018-12-20 16:20:05,584 cherrypy.error.140148434261328:ERROR [20/Dec/2018:16:20:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/lib/encoding.py", line 220, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 112, in run
+    self.tester.conv.events.store(EV_FAULT, _trace)
+AttributeError: 'NoneType' object has no attribute 'events'
+2018-12-20 16:20:05,594 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:20:05] "GET /OP-UserInfo-Endpoint HTTP/1.1" 500 823 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:25:19,828 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:25:19] "GET /pedit HTTP/1.1" 200 3708 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:25:19,863 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:25:19,864 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:25:19,865 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:25:19] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/pedit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:25:19,869 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:25:19,869 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:25:19,869 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:25:19] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/pedit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:25:19,875 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:25:19,875 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:25:19,876 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:25:19,877 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:25:19] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045 "https://op-test:60001/pedit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:25:19,877 cherrypy.error.140148434261328:INFO [20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:25:19,878 cherrypy.access.140148434261328:INFO 127.0.0.1 - - [20/Dec/2018:16:25:19] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/pedit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:00,004 root:INFO construct_app_args
+2018-12-20 16:30:00,118 cherrypy.error:INFO [20/Dec/2018:16:30:00] ENGINE Bus STARTING
+2018-12-20 16:30:00,118 cherrypy.error:INFO [20/Dec/2018:16:30:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 16:30:00,222 cherrypy.error:INFO [20/Dec/2018:16:30:00] ENGINE Serving on https://0.0.0.0:60001
+2018-12-20 16:30:00,222 cherrypy.error:INFO [20/Dec/2018:16:30:00] ENGINE Bus STARTED
+2018-12-20 16:30:03,665 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET / HTTP/1.1" 200 15294 "https://0.0.0.0:60100/run/https%3A%2F%2Fwww.baidu.com/default" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:03,691 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:30:03,692 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:30:03,693 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:03,698 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:30:03,698 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:30:03,699 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:03,702 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:30:03,703 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:30:03,703 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:03,704 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:30:03,704 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:30:03,705 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET /static/logo.png HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:03,720 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 16:30:03,720 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 16:30:03,721 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:03] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:30:07,768 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-UserInfo-Body']
+2018-12-20 16:30:07,770 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:30:07,770 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:30:07,770 oidctest.session:INFO session_setup
+2018-12-20 16:30:07,770 otest.aus.tool:INFO <=<=<=<=< OP-UserInfo-Body >=>=>=>=>
+2018-12-20 16:30:07,770 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:30:07,770 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:30:07,770 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 16:30:07,770 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-20 16:30:07,771 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:30:07] "GET /OP-UserInfo-Body HTTP/1.1" 303 454 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:36:47,327 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-nonce-NoReq-noncode']
+2018-12-20 16:36:47,328 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:36:47,328 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:36:47,328 oidctest.session:INFO session_setup
+2018-12-20 16:36:47,328 otest.aus.tool:INFO <=<=<=<=< OP-nonce-NoReq-noncode >=>=>=>=>
+2018-12-20 16:36:47,328 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:36:47,328 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:36:47,328 otest.aus.tool:INFO <--<-- 2 --- Note -->-->
+2018-12-20 16:36:47,357 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:36:47] "GET /OP-nonce-NoReq-noncode HTTP/1.1" 200 1923 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:36:47,378 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:36:47,379 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:36:47,379 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:36:47] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/OP-nonce-NoReq-noncode" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:36:47,382 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:36:47,382 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:36:47,383 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:36:47] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/OP-nonce-NoReq-noncode" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:36:47,384 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:36:47,385 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:36:47,385 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:36:47] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/OP-nonce-NoReq-noncode" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:37:36,995 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-scope-email']
+2018-12-20 16:37:37,033 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:37:37,033 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:37:37,033 oidctest.session:INFO session_setup
+2018-12-20 16:37:37,034 otest.aus.tool:INFO <=<=<=<=< OP-scope-email >=>=>=>=>
+2018-12-20 16:37:37,034 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:37:37,034 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:37:37,034 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 16:37:37,034 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-20 16:37:37,036 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:37:37] "GET /OP-scope-email HTTP/1.1" 303 466 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:38:34,815 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Req-claims_locales']
+2018-12-20 16:38:34,841 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:38:34,841 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:38:34,841 oidctest.session:INFO session_setup
+2018-12-20 16:38:34,841 otest.aus.tool:INFO <=<=<=<=< OP-Req-claims_locales >=>=>=>=>
+2018-12-20 16:38:34,841 otest.aus.tool:INFO <--<-- 0 --- Note -->-->
+2018-12-20 16:38:34,842 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:38:34] "GET /OP-Req-claims_locales HTTP/1.1" 200 1796 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:21,629 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Req-login_hint']
+2018-12-20 16:40:21,654 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:40:21,654 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:40:21,655 oidctest.session:INFO session_setup
+2018-12-20 16:40:21,656 otest.aus.tool:INFO <=<=<=<=< OP-Req-login_hint >=>=>=>=>
+2018-12-20 16:40:21,656 otest.aus.tool:INFO <--<-- 0 --- VerifyConfiguration -->-->
+2018-12-20 16:40:21,661 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:21] "GET /OP-Req-login_hint HTTP/1.1" 303 112 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:21,677 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:21] "GET /display HTTP/1.1" 200 15801 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:21,706 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:40:21,707 cherrypy.error.140027671754120:INFO [20/Dec/2018:16:40:21] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:40:21,761 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:21] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/display" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:27,213 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:27] "GET /test_info/OP-Req-claims_locales HTTP/1.1" 200 2997 "https://op-test:60001/display" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:35,427 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Req-id_token_hint']
+2018-12-20 16:40:35,436 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:40:35,436 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:40:35,436 oidctest.session:INFO session_setup
+2018-12-20 16:40:35,437 otest.aus.tool:INFO <=<=<=<=< OP-Req-id_token_hint >=>=>=>=>
+2018-12-20 16:40:35,437 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:40:35,438 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:40:35,438 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 16:40:35,439 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-20 16:40:35,446 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:35] "GET /OP-Req-id_token_hint HTTP/1.1" 303 454 "https://op-test:60001/display" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:40:59,399 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Req-NotUnderstood']
+2018-12-20 16:40:59,404 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:40:59,405 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:40:59,405 oidctest.session:INFO session_setup
+2018-12-20 16:40:59,406 otest.aus.tool:INFO <=<=<=<=< OP-Req-NotUnderstood >=>=>=>=>
+2018-12-20 16:40:59,406 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:40:59,407 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:40:59,408 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 16:40:59,408 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-20 16:40:59,412 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:40:59] "GET /OP-Req-NotUnderstood HTTP/1.1" 303 484 "https://op-test:60001/display" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:41:09,123 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Response-Missing']
+2018-12-20 16:41:09,132 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 16:41:09,132 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 16:41:09,133 oidctest.session:INFO session_setup
+2018-12-20 16:41:09,133 otest.aus.tool:INFO <=<=<=<=< OP-Response-Missing >=>=>=>=>
+2018-12-20 16:41:09,133 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 16:41:09,134 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 16:41:09,135 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 16:41:09,136 otest.aus.tool:INFO <--<-- 3 --- Note -->-->
+2018-12-20 16:41:09,139 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:41:09] "GET /OP-Response-Missing HTTP/1.1" 200 1877 "https://op-test:60001/display" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:41:11,631 oidctest.optt:INFO ent:127.0.0.1, vpath: ['continue']
+2018-12-20 16:41:11,633 otest.aus.tool:INFO <=<=<=<=< OP-Response-Missing >=>=>=>=>
+2018-12-20 16:41:11,634 otest.aus.tool:INFO <--<-- 4 --- AsyncAuthn -->-->
+2018-12-20 16:41:11,636 cherrypy.access.140027671754120:INFO 127.0.0.1 - - [20/Dec/2018:16:41:11] "GET /continue?path=OP-Response-Missing&index=3 HTTP/1.1" 303 392 "https://op-test:60001/OP-Response-Missing" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:43:24,633 root:INFO construct_app_args
+2018-12-20 16:43:24,763 cherrypy.error:INFO [20/Dec/2018:16:43:24] ENGINE Bus STARTING
+2018-12-20 16:43:24,763 cherrypy.error:INFO [20/Dec/2018:16:43:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 16:43:24,868 cherrypy.error:INFO [20/Dec/2018:16:43:24] ENGINE Serving on https://0.0.0.0:60001
+2018-12-20 16:43:24,868 cherrypy.error:INFO [20/Dec/2018:16:43:24] ENGINE Bus STARTED
+2018-12-20 16:44:34,476 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:44:34,508 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 16:44:34,511 cherrypy.error.139959164978736:INFO [20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 16:44:34,511 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:44:34,513 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 16:44:34,513 cherrypy.error.139959164978736:INFO [20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 16:44:34,514 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:44:34,515 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 16:44:34,516 cherrypy.error.139959164978736:INFO [20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 16:44:34,516 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:44:34,517 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 16:44:34,518 cherrypy.error.139959164978736:INFO [20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 16:44:34,539 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 16:44:34,539 cherrypy.error.139959164978736:INFO [20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 16:44:34,540 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 16:44:34,564 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:16:44:34] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,101 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,385 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 17:02:40,391 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 17:02:40,393 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 17:02:40,386 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 17:02:40,392 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 17:02:40,393 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 17:02:40,682 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,712 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,721 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,723 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 17:02:40,723 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 17:02:40,724 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:02:40,818 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:02:40] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:01,551 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:01] "GET / HTTP/1.1" 200 15294 "https://0.0.0.0:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:01,646 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 17:07:01,646 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 17:07:01,647 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:01] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:01,712 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 17:07:01,712 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 17:07:01,713 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:01] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:01,715 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 17:07:01,715 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 17:07:01,718 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:01] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:01,753 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 17:07:01,754 cherrypy.error.139959164978736:INFO [20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 17:07:01,775 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:01] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 17:07:02,982 cherrypy.access.139959164978736:INFO 127.0.0.1 - - [20/Dec/2018:17:07:02] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:27,039 root:INFO construct_app_args
+2018-12-20 18:48:27,186 cherrypy.error:INFO [20/Dec/2018:18:48:27] ENGINE Bus STARTING
+2018-12-20 18:48:27,186 cherrypy.error:INFO [20/Dec/2018:18:48:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:48:27,296 cherrypy.error:INFO [20/Dec/2018:18:48:27] ENGINE Serving on https://0.0.0.0:60001
+2018-12-20 18:48:27,296 cherrypy.error:INFO [20/Dec/2018:18:48:27] ENGINE Bus STARTED
+2018-12-20 18:48:29,687 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:29,705 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 18:48:29,706 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 18:48:29,762 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 18:48:29,762 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 18:48:29,769 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:29,779 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:29,780 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-20 18:48:29,780 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-20 18:48:29,811 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:29,846 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-20 18:48:29,847 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-20 18:48:29,870 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:29,966 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 18:48:29,967 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 18:48:29,967 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:29] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:31,003 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:31] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:37,100 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-display-popup']
+2018-12-20 18:48:37,101 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 18:48:37,101 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 18:48:37,101 oidctest.session:INFO session_setup
+2018-12-20 18:48:37,101 otest.aus.tool:INFO <=<=<=<=< OP-display-popup >=>=>=>=>
+2018-12-20 18:48:37,101 otest.aus.tool:INFO <--<-- 0 --- Note -->-->
+2018-12-20 18:48:37,120 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:37] "GET /OP-display-popup HTTP/1.1" 200 1816 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:37,138 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 18:48:37,139 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:37] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 18:48:37,139 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:37] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/OP-display-popup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 18:48:37,140 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 18:48:37,140 cherrypy.error.140662664877448:INFO [20/Dec/2018:18:48:37] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 18:48:37,141 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:18:48:37] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/OP-display-popup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:07:58,217 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-claims-essential']
+2018-12-20 19:07:58,219 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 19:07:58,219 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 19:07:58,219 oidctest.session:INFO session_setup
+2018-12-20 19:07:58,219 otest.aus.tool:INFO <=<=<=<=< OP-claims-essential >=>=>=>=>
+2018-12-20 19:07:58,219 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-20 19:07:58,219 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-20 19:07:58,220 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-20 19:07:58,220 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-20 19:07:58,221 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:07:58] "GET /OP-claims-essential HTTP/1.1" 303 620 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:32,379 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-display-page']
+2018-12-20 19:09:32,380 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 19:09:32,380 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 19:09:32,381 oidctest.session:INFO session_setup
+2018-12-20 19:09:32,381 otest.aus.tool:INFO <=<=<=<=< OP-display-page >=>=>=>=>
+2018-12-20 19:09:32,381 otest.aus.tool:INFO <--<-- 0 --- Note -->-->
+2018-12-20 19:09:32,381 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:32] "GET /OP-display-page HTTP/1.1" 200 1819 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:32,404 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 19:09:32,405 cherrypy.error.140662664877448:INFO [20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 19:09:32,405 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:32] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/OP-display-page" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:32,409 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 19:09:32,410 cherrypy.error.140662664877448:INFO [20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 19:09:32,410 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:32] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/OP-display-page" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:32,414 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-20 19:09:32,414 cherrypy.error.140662664877448:INFO [20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-20 19:09:32,415 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:32] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/OP-display-page" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:38,970 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-display-popup']
+2018-12-20 19:09:38,971 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-20 19:09:38,972 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-20 19:09:38,972 oidctest.session:INFO session_setup
+2018-12-20 19:09:38,972 otest.aus.tool:INFO <=<=<=<=< OP-display-popup >=>=>=>=>
+2018-12-20 19:09:38,972 otest.aus.tool:INFO <--<-- 0 --- Note -->-->
+2018-12-20 19:09:38,972 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:38] "GET /OP-display-popup HTTP/1.1" 200 1816 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:38,997 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-20 19:09:38,997 cherrypy.error.140662664877448:INFO [20/Dec/2018:19:09:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-20 19:09:38,998 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:38] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/OP-display-popup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-20 19:09:38,999 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-20 19:09:38,999 cherrypy.error.140662664877448:INFO [20/Dec/2018:19:09:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-20 19:09:38,999 cherrypy.access.140662664877448:INFO 127.0.0.1 - - [20/Dec/2018:19:09:38] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/OP-display-popup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:44,740 root:INFO construct_app_args
+2018-12-21 14:00:44,904 cherrypy.error:INFO [21/Dec/2018:14:00:44] ENGINE Bus STARTING
+2018-12-21 14:00:45,059 cherrypy.error:INFO [21/Dec/2018:14:00:45] ENGINE Serving on https://0.0.0.0:60001
+2018-12-21 14:00:45,060 cherrypy.error:INFO [21/Dec/2018:14:00:45] ENGINE Bus STARTED
+2018-12-21 14:00:46,653 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,722 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:00:46,726 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-21 14:00:46,725 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:00:46,726 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-21 14:00:46,727 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /static/theme.css HTTP/1.1" 200 11 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,727 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,729 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-21 14:00:46,730 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-21 14:00:46,730 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,749 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-21 14:00:46,750 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-21 14:00:46,750 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028 "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,833 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-21 14:00:46,834 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-21 14:00:46,834 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:00:46,970 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:00:46] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:45,832 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:45] "GET / HTTP/1.1" 200 15294 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:45,877 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:01:45,877 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:01:45,878 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:45] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:45,891 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-21 14:01:45,892 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-21 14:01:45,892 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:45] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:45,893 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-21 14:01:45,894 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-21 14:01:45,895 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:45] "GET /static/logo.png HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:48,652 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-nonce-noncode']
+2018-12-21 14:01:48,654 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:01:48,655 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:01:48,655 oidctest.session:INFO session_setup
+2018-12-21 14:01:48,655 otest.aus.tool:INFO <=<=<=<=< OP-nonce-noncode >=>=>=>=>
+2018-12-21 14:01:48,655 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:01:48,655 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:01:48,656 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:01:48,656 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-21 14:01:48,658 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:48] "GET /OP-nonce-noncode HTTP/1.1" 303 474 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:01:57,962 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-scope-address']
+2018-12-21 14:01:57,964 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:01:57,965 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:01:57,965 oidctest.session:INFO session_setup
+2018-12-21 14:01:57,965 otest.aus.tool:INFO <=<=<=<=< OP-scope-address >=>=>=>=>
+2018-12-21 14:01:57,965 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:01:57,966 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:01:57,966 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:01:57,966 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-21 14:01:57,968 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:01:57] "GET /OP-scope-address HTTP/1.1" 303 490 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:05:09,238 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-prompt-login']
+2018-12-21 14:05:09,241 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:05:09,241 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:05:09,241 oidctest.session:INFO session_setup
+2018-12-21 14:05:09,241 otest.aus.tool:INFO <=<=<=<=< OP-prompt-login >=>=>=>=>
+2018-12-21 14:05:09,241 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:05:09,241 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:05:09,242 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:05:09,242 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-21 14:05:09,244 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:05:09] "GET /OP-prompt-login HTTP/1.1" 303 474 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:05:14,906 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-display-page']
+2018-12-21 14:05:14,908 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:05:14,908 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:05:14,909 oidctest.session:INFO session_setup
+2018-12-21 14:05:14,909 otest.aus.tool:INFO <=<=<=<=< OP-display-page >=>=>=>=>
+2018-12-21 14:05:14,909 otest.aus.tool:INFO <--<-- 0 --- Note -->-->
+2018-12-21 14:05:14,910 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:05:14] "GET /OP-display-page HTTP/1.1" 200 1819 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:05:14,944 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:05:14,946 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:05:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:05:14,947 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:05:14] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/OP-display-page" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:05:18,394 oidctest.optt:INFO ent:127.0.0.1, vpath: ['continue']
+2018-12-21 14:05:18,395 otest.aus.tool:INFO <=<=<=<=< OP-display-page >=>=>=>=>
+2018-12-21 14:05:18,395 otest.aus.tool:INFO <--<-- 1 --- Webfinger -->-->
+2018-12-21 14:05:18,396 otest.aus.tool:INFO <--<-- 2 --- Discovery -->-->
+2018-12-21 14:05:18,396 otest.aus.tool:INFO <--<-- 3 --- Registration -->-->
+2018-12-21 14:05:18,397 otest.aus.tool:INFO <--<-- 4 --- AsyncAuthn -->-->
+2018-12-21 14:05:18,398 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:05:18] "GET /continue?path=OP-display-page&index=0 HTTP/1.1" 303 508 "https://op-test:60001/OP-display-page" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:06:03,739 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:06:03] "GET /pedit HTTP/1.1" 200 3708 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:06:03,776 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:06:03,778 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:06:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:06:03,779 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:06:03] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/pedit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:06:41,191 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:06:41] "GET / HTTP/1.1" 200 15458 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:06:44,402 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Response-Missing']
+2018-12-21 14:06:44,404 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:06:44,405 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:06:44,405 oidctest.session:INFO session_setup
+2018-12-21 14:06:44,405 otest.aus.tool:INFO <=<=<=<=< OP-Response-Missing >=>=>=>=>
+2018-12-21 14:06:44,405 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:06:44,405 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:06:44,405 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:06:44,406 otest.aus.tool:INFO <--<-- 3 --- Note -->-->
+2018-12-21 14:06:44,407 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:06:44] "GET /OP-Response-Missing HTTP/1.1" 200 1877 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:06:50,623 oidctest.optt:INFO ent:127.0.0.1, vpath: ['continue']
+2018-12-21 14:06:50,624 otest.aus.tool:INFO <=<=<=<=< OP-Response-Missing >=>=>=>=>
+2018-12-21 14:06:50,625 otest.aus.tool:INFO <--<-- 4 --- AsyncAuthn -->-->
+2018-12-21 14:06:50,626 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:06:50] "GET /continue?path=OP-Response-Missing&index=3 HTTP/1.1" 303 408 "https://op-test:60001/OP-Response-Missing" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:19:30,773 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:19:30] "GET / HTTP/1.1" 200 15626 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:19:30,828 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:19:30,829 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:19:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:19:30,830 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:19:30] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:19:30,847 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'fonts', 'glyphicons-halflings-regular.woff2']
+2018-12-21 14:19:30,848 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:19:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+2018-12-21 14:19:30,849 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:19:30] "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 - "https://op-test:60001/static/bootstrap/css/bootstrap.min.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:19:39,910 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-IDToken-kid']
+2018-12-21 14:19:39,912 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:19:39,912 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:19:39,912 oidctest.session:INFO session_setup
+2018-12-21 14:19:39,912 otest.aus.tool:INFO <=<=<=<=< OP-IDToken-kid >=>=>=>=>
+2018-12-21 14:19:39,912 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:19:39,913 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:19:39,913 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:19:39,913 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-21 14:19:39,915 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:19:39] "GET /OP-IDToken-kid HTTP/1.1" 303 474 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:23,244 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:23] "GET / HTTP/1.1" 200 15626 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:23,274 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'js', 'bootstrap.min.js']
+2018-12-21 14:25:23,275 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+2018-12-21 14:25:23,275 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:23] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:23,281 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:25:23,282 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'theme.css']
+2018-12-21 14:25:23,283 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+2018-12-21 14:25:23,283 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:23] "GET /static/theme.css HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:23,282 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:25:23,284 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:23] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:23,285 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-21 14:25:23,285 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-21 14:25:23,286 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:23] "GET /static/logo.png HTTP/1.1" 304 - "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:29,472 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:29] "GET / HTTP/1.1" 200 15626 "https://op-test:60100/entity/https%3A%2F%2Fwww.baidu.com" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:29,516 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'logo.png']
+2018-12-21 14:25:29,517 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:25:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+2018-12-21 14:25:29,517 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:29] "GET /static/logo.png HTTP/1.1" 200 8530 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:25:31,986 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-UserInfo-Endpoint']
+2018-12-21 14:25:31,988 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:25:31,988 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:25:31,988 oidctest.session:INFO session_setup
+2018-12-21 14:25:31,989 otest.aus.tool:INFO <=<=<=<=< OP-UserInfo-Endpoint >=>=>=>=>
+2018-12-21 14:25:31,989 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:25:31,989 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:25:31,989 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:25:31,989 otest.aus.tool:INFO <--<-- 3 --- AsyncAuthn -->-->
+2018-12-21 14:25:31,991 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:25:31] "GET /OP-UserInfo-Endpoint HTTP/1.1" 303 474 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:26:08,528 oidctest.optt:INFO ent:127.0.0.1, vpath: ['OP-Response-Missing']
+2018-12-21 14:26:08,530 oic.utils.keyio:DEBUG loading keys for issuer: https://www.baidu.com
+2018-12-21 14:26:08,530 oic.utils.keyio:DEBUG pcr: {'issuer': 'https://www.baidu.com', 'authorization_endpoint': 'https://example.org/authorization', 'jwks_uri': 'https://example.org/jwks', 'response_types_supported': ['token', 'id_token'], 'subject_types_supported': ['public'], 'id_token_signing_alg_values_supported': ['RS256']}
+2018-12-21 14:26:08,530 oidctest.session:INFO session_setup
+2018-12-21 14:26:08,530 otest.aus.tool:INFO <=<=<=<=< OP-Response-Missing >=>=>=>=>
+2018-12-21 14:26:08,530 otest.aus.tool:INFO <--<-- 0 --- Webfinger -->-->
+2018-12-21 14:26:08,530 otest.aus.tool:INFO <--<-- 1 --- Discovery -->-->
+2018-12-21 14:26:08,530 otest.aus.tool:INFO <--<-- 2 --- Registration -->-->
+2018-12-21 14:26:08,531 otest.aus.tool:INFO <--<-- 3 --- Note -->-->
+2018-12-21 14:26:08,532 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:26:08] "GET /OP-Response-Missing HTTP/1.1" 200 1877 "https://op-test:60001/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"
+2018-12-21 14:26:08,551 oidctest.optt:INFO ent:127.0.0.1, vpath: ['static', 'bootstrap', 'css', 'bootstrap.min.css']
+2018-12-21 14:26:08,551 cherrypy.error.140431095140480:INFO [21/Dec/2018:14:26:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+2018-12-21 14:26:08,552 cherrypy.access.140431095140480:INFO 127.0.0.1 - - [21/Dec/2018:14:26:08] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200 "https://op-test:60001/OP-Response-Missing" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0"

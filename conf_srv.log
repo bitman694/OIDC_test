@@ -1,0 +1,610 @@
+2018-12-20 17:13:43,897 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Bus STARTING
+2018-12-20 17:13:43,898 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:13:43,951 cherrypy.error:ERROR [20/Dec/2018:17:13:43] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f713d947198>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:13:43,952 cherrypy.error:ERROR [20/Dec/2018:17:13:43] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:13:43,952 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Bus STOPPING
+2018-12-20 17:13:43,952 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE HTTP Server None already shut down
+2018-12-20 17:13:43,953 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:13:43,953 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Bus STOPPED
+2018-12-20 17:13:43,953 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Bus EXITING
+2018-12-20 17:13:43,954 cherrypy.error:INFO [20/Dec/2018:17:13:43] ENGINE Bus EXITED
+2018-12-20 17:14:16,187 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Bus STARTING
+2018-12-20 17:14:16,188 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:14:16,198 cherrypy.error:ERROR [20/Dec/2018:17:14:16] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fd85eb992b0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:14:16,199 cherrypy.error:ERROR [20/Dec/2018:17:14:16] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:14:16,199 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Bus STOPPING
+2018-12-20 17:14:16,199 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE HTTP Server None already shut down
+2018-12-20 17:14:16,199 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:14:16,200 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Bus STOPPED
+2018-12-20 17:14:16,200 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Bus EXITING
+2018-12-20 17:14:16,200 cherrypy.error:INFO [20/Dec/2018:17:14:16] ENGINE Bus EXITED
+2018-12-20 17:20:03,167 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Bus STARTING
+2018-12-20 17:20:03,189 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:20:03,217 cherrypy.error:ERROR [20/Dec/2018:17:20:03] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fe3e59421d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:20:03,218 cherrypy.error:ERROR [20/Dec/2018:17:20:03] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:20:03,218 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Bus STOPPING
+2018-12-20 17:20:03,218 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE HTTP Server None already shut down
+2018-12-20 17:20:03,219 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:20:03,219 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Bus STOPPED
+2018-12-20 17:20:03,219 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Bus EXITING
+2018-12-20 17:20:03,220 cherrypy.error:INFO [20/Dec/2018:17:20:03] ENGINE Bus EXITED
+2018-12-20 17:21:28,673 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Bus STARTING
+2018-12-20 17:21:28,674 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:21:28,717 cherrypy.error:ERROR [20/Dec/2018:17:21:28] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fbf21be01d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:21:28,717 cherrypy.error:ERROR [20/Dec/2018:17:21:28] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:21:28,718 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Bus STOPPING
+2018-12-20 17:21:28,718 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE HTTP Server None already shut down
+2018-12-20 17:21:28,718 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:21:28,719 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Bus STOPPED
+2018-12-20 17:21:28,719 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Bus EXITING
+2018-12-20 17:21:28,719 cherrypy.error:INFO [20/Dec/2018:17:21:28] ENGINE Bus EXITED
+2018-12-20 17:21:55,058 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Bus STARTING
+2018-12-20 17:21:55,058 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:21:55,069 cherrypy.error:ERROR [20/Dec/2018:17:21:55] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f1f29b8a1d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:21:55,069 cherrypy.error:ERROR [20/Dec/2018:17:21:55] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:21:55,070 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Bus STOPPING
+2018-12-20 17:21:55,070 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE HTTP Server None already shut down
+2018-12-20 17:21:55,070 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:21:55,070 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Bus STOPPED
+2018-12-20 17:21:55,071 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Bus EXITING
+2018-12-20 17:21:55,071 cherrypy.error:INFO [20/Dec/2018:17:21:55] ENGINE Bus EXITED
+2018-12-20 17:21:58,558 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Bus STARTING
+2018-12-20 17:21:58,559 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:21:58,564 cherrypy.error:ERROR [20/Dec/2018:17:21:58] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f0ac8f547f0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:21:58,564 cherrypy.error:ERROR [20/Dec/2018:17:21:58] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:21:58,564 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Bus STOPPING
+2018-12-20 17:21:58,564 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE HTTP Server None already shut down
+2018-12-20 17:21:58,564 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:21:58,564 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Bus STOPPED
+2018-12-20 17:21:58,564 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Bus EXITING
+2018-12-20 17:21:58,565 cherrypy.error:INFO [20/Dec/2018:17:21:58] ENGINE Bus EXITED
+2018-12-20 17:30:00,661 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Bus STARTING
+2018-12-20 17:30:00,662 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:30:00,672 cherrypy.error:ERROR [20/Dec/2018:17:30:00] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fa9ea7191d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:30:00,672 cherrypy.error:ERROR [20/Dec/2018:17:30:00] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:30:00,673 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Bus STOPPING
+2018-12-20 17:30:00,673 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE HTTP Server None already shut down
+2018-12-20 17:30:00,673 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:30:00,674 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Bus STOPPED
+2018-12-20 17:30:00,674 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Bus EXITING
+2018-12-20 17:30:00,674 cherrypy.error:INFO [20/Dec/2018:17:30:00] ENGINE Bus EXITED
+2018-12-20 17:30:17,840 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Bus STARTING
+2018-12-20 17:30:17,841 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:30:17,851 cherrypy.error:ERROR [20/Dec/2018:17:30:17] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f8d084fc1d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:30:17,851 cherrypy.error:ERROR [20/Dec/2018:17:30:17] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:30:17,851 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Bus STOPPING
+2018-12-20 17:30:17,852 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE HTTP Server None already shut down
+2018-12-20 17:30:17,852 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:30:17,852 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Bus STOPPED
+2018-12-20 17:30:17,853 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Bus EXITING
+2018-12-20 17:30:17,853 cherrypy.error:INFO [20/Dec/2018:17:30:17] ENGINE Bus EXITED
+2018-12-20 17:37:20,555 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Bus STARTING
+2018-12-20 17:37:20,563 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:37:20,606 cherrypy.error:ERROR [20/Dec/2018:17:37:20] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f99b0607710>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:37:20,606 cherrypy.error:ERROR [20/Dec/2018:17:37:20] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:37:20,606 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Bus STOPPING
+2018-12-20 17:37:20,607 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE HTTP Server None already shut down
+2018-12-20 17:37:20,607 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:37:20,607 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Bus STOPPED
+2018-12-20 17:37:20,607 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Bus EXITING
+2018-12-20 17:37:20,607 cherrypy.error:INFO [20/Dec/2018:17:37:20] ENGINE Bus EXITED
+2018-12-20 17:38:56,414 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Bus STARTING
+2018-12-20 17:38:56,415 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:38:56,458 cherrypy.error:ERROR [20/Dec/2018:17:38:56] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7ff92b0b81d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:38:56,459 cherrypy.error:ERROR [20/Dec/2018:17:38:56] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:38:56,459 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Bus STOPPING
+2018-12-20 17:38:56,459 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE HTTP Server None already shut down
+2018-12-20 17:38:56,460 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:38:56,460 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Bus STOPPED
+2018-12-20 17:38:56,460 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Bus EXITING
+2018-12-20 17:38:56,461 cherrypy.error:INFO [20/Dec/2018:17:38:56] ENGINE Bus EXITED
+2018-12-20 17:45:43,720 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Bus STARTING
+2018-12-20 17:45:43,721 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:45:43,776 cherrypy.error:ERROR [20/Dec/2018:17:45:43] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f9cd81e72b0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:45:43,777 cherrypy.error:ERROR [20/Dec/2018:17:45:43] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:45:43,777 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Bus STOPPING
+2018-12-20 17:45:43,778 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE HTTP Server None already shut down
+2018-12-20 17:45:43,778 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:45:43,778 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Bus STOPPED
+2018-12-20 17:45:43,779 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Bus EXITING
+2018-12-20 17:45:43,779 cherrypy.error:INFO [20/Dec/2018:17:45:43] ENGINE Bus EXITED
+2018-12-20 17:46:41,930 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Bus STARTING
+2018-12-20 17:46:41,931 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:46:41,941 cherrypy.error:ERROR [20/Dec/2018:17:46:41] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f55e396c1d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:46:41,941 cherrypy.error:ERROR [20/Dec/2018:17:46:41] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:46:41,942 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Bus STOPPING
+2018-12-20 17:46:41,942 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE HTTP Server None already shut down
+2018-12-20 17:46:41,942 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:46:41,942 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Bus STOPPED
+2018-12-20 17:46:41,943 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Bus EXITING
+2018-12-20 17:46:41,943 cherrypy.error:INFO [20/Dec/2018:17:46:41] ENGINE Bus EXITED
+2018-12-20 17:51:12,944 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Bus STARTING
+2018-12-20 17:51:12,944 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:51:12,949 cherrypy.error:ERROR [20/Dec/2018:17:51:12] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fa2ca8479e8>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:51:12,949 cherrypy.error:ERROR [20/Dec/2018:17:51:12] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Bus STOPPING
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE HTTP Server None already shut down
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Bus STOPPED
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Bus EXITING
+2018-12-20 17:51:12,950 cherrypy.error:INFO [20/Dec/2018:17:51:12] ENGINE Bus EXITED
+2018-12-20 17:52:30,348 cherrypy.error:INFO [20/Dec/2018:17:52:30] ENGINE Bus STARTING
+2018-12-20 17:52:30,349 cherrypy.error:INFO [20/Dec/2018:17:52:30] ENGINE Bus STARTED
+2018-12-20 17:53:41,748 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Keyboard Interrupt: shutting down bus
+2018-12-20 17:53:41,748 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Bus STOPPING
+2018-12-20 17:53:41,749 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE HTTP Server None already shut down
+2018-12-20 17:53:41,749 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE No thread running for None.
+2018-12-20 17:53:41,749 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Bus STOPPED
+2018-12-20 17:53:41,749 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Bus EXITING
+2018-12-20 17:53:41,750 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Bus EXITED
+2018-12-20 17:53:41,750 cherrypy.error:INFO [20/Dec/2018:17:53:41] ENGINE Waiting for child threads to terminate...
+2018-12-20 17:53:46,231 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Bus STARTING
+2018-12-20 17:53:46,232 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:53:46,262 cherrypy.error:ERROR [20/Dec/2018:17:53:46] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f2534369eb8>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:53:46,263 cherrypy.error:ERROR [20/Dec/2018:17:53:46] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:53:46,263 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Bus STOPPING
+2018-12-20 17:53:46,264 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE HTTP Server None already shut down
+2018-12-20 17:53:46,264 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:53:46,264 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Bus STOPPED
+2018-12-20 17:53:46,264 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Bus EXITING
+2018-12-20 17:53:46,265 cherrypy.error:INFO [20/Dec/2018:17:53:46] ENGINE Bus EXITED
+2018-12-20 17:59:16,735 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Bus STARTING
+2018-12-20 17:59:16,736 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 17:59:16,746 cherrypy.error:ERROR [20/Dec/2018:17:59:16] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f52697bc860>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 219, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 17:59:16,747 cherrypy.error:ERROR [20/Dec/2018:17:59:16] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 257, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 237, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 17:59:16,747 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Bus STOPPING
+2018-12-20 17:59:16,747 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE HTTP Server None already shut down
+2018-12-20 17:59:16,748 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 17:59:16,748 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Bus STOPPED
+2018-12-20 17:59:16,748 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Bus EXITING
+2018-12-20 17:59:16,749 cherrypy.error:INFO [20/Dec/2018:17:59:16] ENGINE Bus EXITED
+2018-12-20 18:10:34,711 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Bus STARTING
+2018-12-20 18:10:34,729 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:10:34,761 cherrypy.error:ERROR [20/Dec/2018:18:10:34] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fc248c3dcc0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 18:10:34,762 cherrypy.error:ERROR [20/Dec/2018:18:10:34] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 18:10:34,762 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Bus STOPPING
+2018-12-20 18:10:34,763 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE HTTP Server None already shut down
+2018-12-20 18:10:34,763 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 18:10:34,763 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Bus STOPPED
+2018-12-20 18:10:34,764 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Bus EXITING
+2018-12-20 18:10:34,764 cherrypy.error:INFO [20/Dec/2018:18:10:34] ENGINE Bus EXITED
+2018-12-20 18:18:22,075 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Bus STARTING
+2018-12-20 18:18:22,076 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:18:22,086 cherrypy.error:ERROR [20/Dec/2018:18:18:22] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f8263091908>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 18:18:22,086 cherrypy.error:ERROR [20/Dec/2018:18:18:22] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 18:18:22,086 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Bus STOPPING
+2018-12-20 18:18:22,087 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE HTTP Server None already shut down
+2018-12-20 18:18:22,087 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 18:18:22,087 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Bus STOPPED
+2018-12-20 18:18:22,088 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Bus EXITING
+2018-12-20 18:18:22,088 cherrypy.error:INFO [20/Dec/2018:18:18:22] ENGINE Bus EXITED
+2018-12-20 18:20:40,627 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Bus STARTING
+2018-12-20 18:20:40,629 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:20:40,679 cherrypy.error:ERROR [20/Dec/2018:18:20:40] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f1627f4c2b0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 18:20:40,680 cherrypy.error:ERROR [20/Dec/2018:18:20:40] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 18:20:40,680 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Bus STOPPING
+2018-12-20 18:20:40,680 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE HTTP Server None already shut down
+2018-12-20 18:20:40,681 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 18:20:40,681 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Bus STOPPED
+2018-12-20 18:20:40,681 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Bus EXITING
+2018-12-20 18:20:40,682 cherrypy.error:INFO [20/Dec/2018:18:20:40] ENGINE Bus EXITED
+2018-12-20 18:22:54,708 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Bus STARTING
+2018-12-20 18:22:54,709 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:22:54,718 cherrypy.error:ERROR [20/Dec/2018:18:22:54] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f1c23591358>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 18:22:54,719 cherrypy.error:ERROR [20/Dec/2018:18:22:54] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 18:22:54,719 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Bus STOPPING
+2018-12-20 18:22:54,719 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE HTTP Server None already shut down
+2018-12-20 18:22:54,719 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 18:22:54,720 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Bus STOPPED
+2018-12-20 18:22:54,720 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Bus EXITING
+2018-12-20 18:22:54,720 cherrypy.error:INFO [20/Dec/2018:18:22:54] ENGINE Bus EXITED
+2018-12-20 18:44:28,323 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Bus STARTING
+2018-12-20 18:44:28,334 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+2018-12-20 18:44:28,349 cherrypy.error:ERROR [20/Dec/2018:18:44:28] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f2f35c34828>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 176, in start
+    self.httpserver, self.bind_addr = self.httpserver_from_self()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 167, in httpserver_from_self
+    httpserver = _cpwsgi_server.CPWSGIServer(self)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpwsgi_server.py", line 64, in __init__
+    self.server_adapter.ssl_certificate_chain)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/ssl_builtin.py", line 56, in __init__
+    self.context.load_cert_chain(certificate, private_key)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2018-12-20 18:44:28,350 cherrypy.error:ERROR [20/Dec/2018:18:44:28] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: FileNotFoundError(2, 'No such file or directory')
+
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Bus STOPPING
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE HTTP Server None already shut down
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Stopped thread '_TimeoutMonitor'.
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Bus STOPPED
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Bus EXITING
+2018-12-20 18:44:28,350 cherrypy.error:INFO [20/Dec/2018:18:44:28] ENGINE Bus EXITED

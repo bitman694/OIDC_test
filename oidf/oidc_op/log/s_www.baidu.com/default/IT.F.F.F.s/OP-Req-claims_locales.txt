@@ -1,0 +1,25 @@
+Test tool version: 2.1.x-dev
+Issuer: https://www.baidu.com
+Profile: []
+Test ID: OP-Req-claims_locales
+Test description: Providing claims_locales
+Timestamp: 2018-12-20T08:38:34Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Note -->-->
+
+
+
+============================================================
+
+Conditions
+
+
+
+
+============================================================
+
+RESULT: PARTIAL RESULT

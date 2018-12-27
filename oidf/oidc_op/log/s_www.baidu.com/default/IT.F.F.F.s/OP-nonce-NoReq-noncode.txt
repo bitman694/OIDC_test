@@ -1,0 +1,29 @@
+Test tool version: 2.1.x-dev
+Issuer: https://www.baidu.com
+Profile: []
+Test ID: OP-nonce-NoReq-noncode
+Test description: Reject requests without nonce unless using the code flow
+Timestamp: 2018-12-20T08:36:47Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Webfinger -->-->
+0 not expected to do WebFinger
+0 phase <--<-- 1 --- Discovery -->-->
+0 not expected to do Dynamic discovery
+0 phase <--<-- 2 --- Note -->-->
+
+
+
+============================================================
+
+Conditions
+
+
+
+
+============================================================
+
+RESULT: PARTIAL RESULT

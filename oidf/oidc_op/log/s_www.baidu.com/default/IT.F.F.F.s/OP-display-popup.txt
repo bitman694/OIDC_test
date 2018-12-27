@@ -1,0 +1,25 @@
+Test tool version: 2.1.x-dev
+Issuer: https://www.baidu.com
+Profile: []
+Test ID: OP-display-popup
+Test description: Request with display=popup
+Timestamp: 2018-12-20T11:09:38Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Note -->-->
+
+
+
+============================================================
+
+Conditions
+
+
+
+
+============================================================
+
+RESULT: PARTIAL RESULT

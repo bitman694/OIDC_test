@@ -1,0 +1,14 @@
+{
+  "tool": {
+    "tag": "default",
+    "return_type": "code",
+    "webfinger": true,
+    "discover": true,
+    "register": true,
+    "issuer": "https://localhost:8040/",
+    "sig": false,
+    "enc": false,
+    "extra": false,
+    "insecure": false
+  }
+}

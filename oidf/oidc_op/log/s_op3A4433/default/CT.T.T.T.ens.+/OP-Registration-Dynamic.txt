@@ -1,0 +1,378 @@
+Test tool version: 2.1.x-dev
+Issuer: https://op:4433
+Profile: []
+Test ID: OP-Registration-Dynamic
+Test description: Client registration request
+Timestamp: 2018-12-21T08:29:05Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Webfinger -->-->
+0 discover kwargs:{'principal': 'https://op:4433/foobar'}
+0 http response url:https://op:4433/.well-known/webfinger?resource=https%3A%2F%2Fop%3A4433%2Ffoobar&rel=http%3A%2F%2Fopenid.net%2Fspecs%2Fconnect%2F1.0%2Fissuer status_code:200
+0 response {"links":[{"href":"https://op:4433","rel":"http://openid.net/specs/connect/1.0/issuer"}],"subject":"https://op:4433/foobar"}
+0 jrd response {'links': [{'href': 'https://op:4433', 'rel': 'http://openid.net/specs/connect/1.0/issuer'}], 'subject': 'https://op:4433/foobar'}
+0 response https://op:4433
+0 issuer https://op:4433
+0 phase <--<-- 1 --- Discovery -->-->
+0 provider_config kwargs:{'issuer': 'https://op:4433'}
+0 http response url:https://op:4433/.well-known/openid-configuration status_code:200
+0 ProviderConfigurationResponse {
+    "acr_values_supported": [
+        "urn:mace:incommon:iap:bronze"
+    ],
+    "authorization_endpoint": "https://op:4433/auth",
+    "backchannel_logout_session_supported": true,
+    "backchannel_logout_supported": true,
+    "check_session_iframe": "https://op:4433/session/check",
+    "claim_types_supported": [
+        "normal"
+    ],
+    "claims_parameter_supported": true,
+    "claims_supported": [
+        "acr",
+        "address",
+        "amr",
+        "auth_time",
+        "birthdate",
+        "email",
+        "email_verified",
+        "family_name",
+        "gender",
+        "given_name",
+        "iss",
+        "locale",
+        "middle_name",
+        "name",
+        "nickname",
+        "phone_number",
+        "phone_number_verified",
+        "picture",
+        "preferred_username",
+        "profile",
+        "sub",
+        "updated_at",
+        "website",
+        "zoneinfo"
+    ],
+    "code_challenge_methods_supported": [
+        "S256"
+    ],
+    "end_session_endpoint": "https://op:4433/session/end",
+    "frontchannel_logout_session_supported": true,
+    "frontchannel_logout_supported": true,
+    "grant_types_supported": [
+        "implicit",
+        "authorization_code",
+        "refresh_token"
+    ],
+    "id_token_encryption_alg_values_supported": [
+        "RSA-OAEP",
+        "RSA-OAEP-256",
+        "RSA1_5",
+        "ECDH-ES",
+        "ECDH-ES+A128KW",
+        "ECDH-ES+A192KW",
+        "ECDH-ES+A256KW",
+        "A128GCMKW",
+        "A192GCMKW",
+        "A256GCMKW",
+        "A128KW",
+        "A192KW",
+        "A256KW",
+        "PBES2-HS256+A128KW",
+        "PBES2-HS384+A192KW",
+        "PBES2-HS512+A256KW"
+    ],
+    "id_token_encryption_enc_values_supported": [
+        "A128CBC-HS256",
+        "A128GCM",
+        "A192CBC-HS384",
+        "A192GCM",
+        "A256CBC-HS512",
+        "A256GCM"
+    ],
+    "id_token_signing_alg_values_supported": [
+        "none",
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "introspection_endpoint": "https://op:4433/token/introspection",
+    "introspection_endpoint_auth_methods_supported": [
+        "none",
+        "client_secret_basic",
+        "client_secret_jwt",
+        "client_secret_post",
+        "private_key_jwt"
+    ],
+    "introspection_endpoint_auth_signing_alg_values_supported": [
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "issuer": "https://op:4433",
+    "jwks_uri": "https://op:4433/certs",
+    "registration_endpoint": "https://op:4433/reg",
+    "request_object_encryption_alg_values_supported": [
+        "A128GCMKW",
+        "A192GCMKW",
+        "A256GCMKW",
+        "A128KW",
+        "A192KW",
+        "A256KW",
+        "PBES2-HS256+A128KW",
+        "PBES2-HS384+A192KW",
+        "PBES2-HS512+A256KW",
+        "RSA-OAEP",
+        "RSA-OAEP-256",
+        "RSA1_5",
+        "ECDH-ES",
+        "ECDH-ES+A128KW",
+        "ECDH-ES+A192KW",
+        "ECDH-ES+A256KW"
+    ],
+    "request_object_encryption_enc_values_supported": [
+        "A128CBC-HS256",
+        "A128GCM",
+        "A192CBC-HS384",
+        "A192GCM",
+        "A256CBC-HS512",
+        "A256GCM"
+    ],
+    "request_object_signing_alg_values_supported": [
+        "none",
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "request_parameter_supported": true,
+    "request_uri_parameter_supported": true,
+    "require_request_uri_registration": true,
+    "response_modes_supported": [
+        "form_post",
+        "fragment",
+        "query"
+    ],
+    "response_types_supported": [
+        "code id_token token",
+        "code id_token",
+        "code token",
+        "code",
+        "id_token token",
+        "id_token",
+        "none"
+    ],
+    "revocation_endpoint": "https://op:4433/token/revocation",
+    "revocation_endpoint_auth_methods_supported": [
+        "none",
+        "client_secret_basic",
+        "client_secret_jwt",
+        "client_secret_post",
+        "private_key_jwt"
+    ],
+    "revocation_endpoint_auth_signing_alg_values_supported": [
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "scopes_supported": [
+        "openid",
+        "offline_access",
+        "address",
+        "email",
+        "phone",
+        "profile"
+    ],
+    "service_documentation": "https://github.com/panva/node-oidc-provider",
+    "subject_types_supported": [
+        "public",
+        "pairwise"
+    ],
+    "token_endpoint": "https://op:4433/token",
+    "token_endpoint_auth_methods_supported": [
+        "none",
+        "client_secret_basic",
+        "client_secret_jwt",
+        "client_secret_post",
+        "private_key_jwt"
+    ],
+    "token_endpoint_auth_signing_alg_values_supported": [
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "userinfo_encryption_alg_values_supported": [
+        "RSA-OAEP",
+        "RSA-OAEP-256",
+        "RSA1_5",
+        "ECDH-ES",
+        "ECDH-ES+A128KW",
+        "ECDH-ES+A192KW",
+        "ECDH-ES+A256KW",
+        "A128GCMKW",
+        "A192GCMKW",
+        "A256GCMKW",
+        "A128KW",
+        "A192KW",
+        "A256KW",
+        "PBES2-HS256+A128KW",
+        "PBES2-HS384+A192KW",
+        "PBES2-HS512+A256KW"
+    ],
+    "userinfo_encryption_enc_values_supported": [
+        "A128CBC-HS256",
+        "A128GCM",
+        "A192CBC-HS384",
+        "A192GCM",
+        "A256CBC-HS512",
+        "A256GCM"
+    ],
+    "userinfo_endpoint": "https://op:4433/me",
+    "userinfo_signing_alg_values_supported": [
+        "none",
+        "HS256",
+        "HS384",
+        "HS512",
+        "RS256",
+        "RS384",
+        "RS512",
+        "PS256",
+        "PS384",
+        "PS512",
+        "ES256",
+        "ES384",
+        "ES512"
+    ],
+    "version": "4.0.3"
+}
+0 phase <--<-- 2 --- Registration -->-->
+0 register kwargs:{'response_types': ['code token'], 'grant_types': ['authorization_code', 'implicit'], 'application_name': 'OIC test tool', 'application_type': 'web', 'redirect_uris': ['https://op-test:60003/authz_cb'], 'contacts': ['roland@example.com'], 'post_logout_redirect_uris': ['https://op-test:60003/logout'], 'url': 'https://op:4433/reg', 'jwks_uri': 'https://op-test:60003/static/jwks_60003.json'}
+0 RegistrationRequest {
+    "application_type": "web",
+    "contacts": [
+        "roland@example.com"
+    ],
+    "grant_types": [
+        "implicit",
+        "authorization_code"
+    ],
+    "jwks_uri": "https://op-test:60003/static/jwks_60003.json",
+    "post_logout_redirect_uris": [
+        "https://op-test:60003/logout"
+    ],
+    "redirect_uris": [
+        "https://op-test:60003/authz_cb"
+    ],
+    "request_uris": [
+        "https://op-test:60003/requests/dc4f3ed61278e085cede90a228a33950693ce2c57ebabf11419b090135e9ad6e#4qprrNhFytHMKNlD"
+    ],
+    "response_types": [
+        "code token"
+    ]
+}
+0 http response url:https://op:4433/reg status_code:201
+0 RegistrationResponse {
+    "application_type": "web",
+    "backchannel_logout_session_required": false,
+    "client_id": "5a0acaa7-831f-4875-9c67-1c5475395f7f",
+    "client_id_issued_at": 1545380945,
+    "client_secret": "V81sSboBhNLjniWhDRXnPeLRwCtu/pYx021fAOUTxUAzQIrnLV9kSbjeNKAuC8Dw",
+    "client_secret_expires_at": 0,
+    "contacts": [
+        "roland@example.com"
+    ],
+    "frontchannel_logout_session_required": false,
+    "grant_types": [
+        "implicit",
+        "authorization_code"
+    ],
+    "id_token_signed_response_alg": "RS256",
+    "introspection_endpoint_auth_method": "client_secret_basic",
+    "jwks_uri": "https://op-test:60003/static/jwks_60003.json",
+    "post_logout_redirect_uris": [
+        "https://op-test:60003/logout"
+    ],
+    "redirect_uris": [
+        "https://op-test:60003/authz_cb"
+    ],
+    "registration_access_token": "YjVlNjQ2NTgtOTM1Zi00ZDZkLTk1NGQtMTA4MDE0MjViYzgycxiIdOcnm6JEt2LwY3PXxMs79tMKDWsymu3jOoqMAOqgAuzpJ3LimcVajRtwfrM3a0vHyxPmSGk4zE7kds1HUg",
+    "registration_client_uri": "https://op:4433/reg/5a0acaa7-831f-4875-9c67-1c5475395f7f",
+    "request_uris": [
+        "https://op-test:60003/requests/dc4f3ed61278e085cede90a228a33950693ce2c57ebabf11419b090135e9ad6e#4qprrNhFytHMKNlD"
+    ],
+    "require_auth_time": false,
+    "response_types": [
+        "code token"
+    ],
+    "revocation_endpoint_auth_method": "client_secret_basic",
+    "subject_type": "public",
+    "token_endpoint_auth_method": "client_secret_basic"
+}
+0 phase <--<-- 3 --- Done -->-->
+0 end 
+0 assertion CheckHTTPResponse
+0 condition check-http-response: status=OK [Checks that the HTTP response status is within the 200 or 300 range. Also does some extra JSON checks]
+0 condition Done: status=OK
+
+
+
+============================================================
+
+Conditions
+
+check-http-response: status=OK [Checks that the HTTP response status is within the 200 or 300 range. Also does some extra JSON checks]
+Done: status=OK
+
+
+
+============================================================
+
+RESULT: PASSED

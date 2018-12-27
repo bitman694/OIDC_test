@@ -1,0 +1,35 @@
+Test tool version: 2.1.x-dev
+Issuer: 
+Profile: []
+Test ID: OP-Discovery-WebFinger-Email
+Test description: Can discover identifiers using e-mail syntax
+Timestamp: 2018-12-25T06:37:11Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Webfinger -->-->
+0 discover kwargs:{'principal': 'acct:foobar@op:4433'}
+6 http response url:https://op:4433/.well-known/webfinger?resource=acct%3Afoobar%40op%3A4433&rel=http%3A%2F%2Fopenid.net%2Fspecs%2Fconnect%2F1.0%2Fissuer status_code:200
+6 response {"links":[{"href":"https://op:4433","rel":"http://openid.net/specs/connect/1.0/issuer"}],"subject":"acct:foobar@op:4433"}
+6 jrd response {'links': [{'href': 'https://op:4433', 'rel': 'http://openid.net/specs/connect/1.0/issuer'}], 'subject': 'acct:foobar@op:4433'}
+6 response https://op:4433
+6 issuer https://op:4433
+6 phase <--<-- 1 --- Done -->-->
+6 end 
+6 condition Done: status=OK
+
+
+
+============================================================
+
+Conditions
+
+Done: status=OK
+
+
+
+============================================================
+
+RESULT: PASSED

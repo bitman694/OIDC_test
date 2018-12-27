@@ -1,0 +1,29 @@
+Test tool version: 2.1.x-dev
+Issuer: https://www.baidu.com
+Profile: []
+Test ID: OP-Req-login_hint
+Test description: Providing login_hint
+Timestamp: 2018-12-20T08:40:21Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- VerifyConfiguration -->-->
+0 condition Check support: status=ERROR, message=No login_hint in the configuration
+
+
+
+============================================================
+
+Conditions
+
+Check support: status=ERROR, message=No login_hint in the configuration
+
+
+
+============================================================
+
+RESULT: PARTIAL RESULT
+Errors:
+No login_hint in the configuration

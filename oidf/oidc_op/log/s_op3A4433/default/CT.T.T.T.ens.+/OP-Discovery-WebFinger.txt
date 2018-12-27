@@ -1,0 +1,35 @@
+Test tool version: 2.1.x-dev
+Issuer: 
+Profile: []
+Test ID: OP-Discovery-WebFinger
+Test description: Can discover identifiers using URL syntax [Dynamic]
+Timestamp: 2018-12-25T06:40:54Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Webfinger -->-->
+0 discover kwargs:{'principal': 'https://op:4433/foobar'}
+0 http response url:https://op:4433/.well-known/webfinger?resource=https%3A%2F%2Fop%3A4433%2Ffoobar&rel=http%3A%2F%2Fopenid.net%2Fspecs%2Fconnect%2F1.0%2Fissuer status_code:200
+0 response {"links":[{"href":"https://op:4433","rel":"http://openid.net/specs/connect/1.0/issuer"}],"subject":"https://op:4433/foobar"}
+0 jrd response {'links': [{'href': 'https://op:4433', 'rel': 'http://openid.net/specs/connect/1.0/issuer'}], 'subject': 'https://op:4433/foobar'}
+0 response https://op:4433
+0 issuer https://op:4433
+0 phase <--<-- 1 --- Done -->-->
+0 end 
+0 condition Done: status=OK
+
+
+
+============================================================
+
+Conditions
+
+Done: status=OK
+
+
+
+============================================================
+
+RESULT: PASSED

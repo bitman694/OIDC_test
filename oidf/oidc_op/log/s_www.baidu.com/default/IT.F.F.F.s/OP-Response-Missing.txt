@@ -1,0 +1,31 @@
+Test tool version: 2.1.x-dev
+Issuer: https://www.baidu.com
+Profile: []
+Test ID: OP-Response-Missing
+Test description: Authorization request missing the response_type parameter
+Timestamp: 2018-12-21T06:26:08Z
+
+============================================================
+
+Trace output
+
+0 phase <--<-- 0 --- Webfinger -->-->
+0 not expected to do WebFinger
+0 phase <--<-- 1 --- Discovery -->-->
+0 not expected to do Dynamic discovery
+0 phase <--<-- 2 --- Registration -->-->
+0 not expected to do Dynamic registration
+0 phase <--<-- 3 --- Note -->-->
+
+
+
+============================================================
+
+Conditions
+
+
+
+
+============================================================
+
+RESULT: PARTIAL RESULT

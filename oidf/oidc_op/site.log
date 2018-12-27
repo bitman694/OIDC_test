@@ -1,0 +1,1404 @@
+[20/Dec/2018:16:00:23] ENGINE Bus STARTING
+[20/Dec/2018:16:00:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:00:28] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f9f7a3b4b70>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60000 not free on '0.0.0.0'
+
+[20/Dec/2018:16:00:28] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60000 not free on '0.0.0.0'")
+
+[20/Dec/2018:16:00:28] ENGINE Bus STOPPING
+[20/Dec/2018:16:00:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60000)) already shut down
+[20/Dec/2018:16:00:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:16:00:28] ENGINE Bus STOPPED
+[20/Dec/2018:16:00:28] ENGINE Bus EXITING
+[20/Dec/2018:16:00:28] ENGINE Bus EXITED
+[20/Dec/2018:16:03:54] ENGINE Bus STARTING
+[20/Dec/2018:16:03:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:03:54] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:16:03:54] ENGINE Bus STARTED
+[20/Dec/2018:16:05:07] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/local/lib/python3.7/_pyio.py", line 513, in readline
+    b = self.read(nreadahead())
+  File "/usr/local/lib/python3.7/_pyio.py", line 492, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1076, in peek
+    return self._peek_unlocked(size)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1083, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:2471)
+
+[20/Dec/2018:16:05:07] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/local/lib/python3.7/_pyio.py", line 513, in readline
+    b = self.read(nreadahead())
+  File "/usr/local/lib/python3.7/_pyio.py", line 492, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1076, in peek
+    return self._peek_unlocked(size)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1083, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:2471)
+
+[20/Dec/2018:16:05:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:05:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:05:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:05:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:05:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:05:45] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/local/lib/python3.7/_pyio.py", line 513, in readline
+    b = self.read(nreadahead())
+  File "/usr/local/lib/python3.7/_pyio.py", line 492, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1076, in peek
+    return self._peek_unlocked(size)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1083, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:2471)
+
+[20/Dec/2018:16:05:45] ENGINE Bus STARTING
+[20/Dec/2018:16:05:45] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:05:50] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f4f85056b00>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60003 not free on '0.0.0.0'
+
+[20/Dec/2018:16:05:50] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60003 not free on '0.0.0.0'")
+
+[20/Dec/2018:16:05:50] ENGINE Bus STOPPING
+[20/Dec/2018:16:05:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60003)) already shut down
+[20/Dec/2018:16:05:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:16:05:50] ENGINE Bus STOPPED
+[20/Dec/2018:16:05:50] ENGINE Bus EXITING
+[20/Dec/2018:16:05:50] ENGINE Bus EXITED
+[20/Dec/2018:16:06:22] ENGINE Bus STARTING
+[20/Dec/2018:16:06:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:06:27] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fd5cbe658d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60001 not free on '0.0.0.0'
+
+[20/Dec/2018:16:06:27] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60001 not free on '0.0.0.0'")
+
+[20/Dec/2018:16:06:27] ENGINE Bus STOPPING
+[20/Dec/2018:16:06:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60001)) already shut down
+[20/Dec/2018:16:06:27] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:16:06:27] ENGINE Bus STOPPED
+[20/Dec/2018:16:06:27] ENGINE Bus EXITING
+[20/Dec/2018:16:06:27] ENGINE Bus EXITED
+[20/Dec/2018:16:07:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:07:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:07:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:07:27] ENGINE Bus STARTING
+[20/Dec/2018:16:07:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:07:27] ENGINE Serving on https://0.0.0.0:60001
+[20/Dec/2018:16:07:27] ENGINE Bus STARTED
+[20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:07:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:07:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:07:36] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/lib/encoding.py", line 220, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 112, in run
+    self.tester.conv.events.store(EV_FAULT, _trace)
+AttributeError: 'NoneType' object has no attribute 'events'
+[20/Dec/2018:16:18:08] ENGINE Bus STARTING
+[20/Dec/2018:16:18:08] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:18:08] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:16:18:08] ENGINE Bus STARTED
+[20/Dec/2018:16:18:31] ENGINE Bus STARTING
+[20/Dec/2018:16:18:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:18:31] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:16:18:31] ENGINE Bus STARTED
+[20/Dec/2018:16:19:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:19:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:19:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:19:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:19:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:19:41] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:19:41] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:19:41] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:19:41] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:19:46] ENGINE Bus STARTING
+[20/Dec/2018:16:19:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:19:46] ENGINE Serving on https://0.0.0.0:60001
+[20/Dec/2018:16:19:46] ENGINE Bus STARTED
+[20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:19:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:20:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 106, in run
+    resp = self.tester.run(test, **self.webenv)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 101, in run
+    self.setup(test_id, **kw_args)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/tool.py", line 89, in setup
+    **kw_args['client_info'])
+  File "/usr/local/lib/python3.7/site-packages/otest-0.7.3-py3.7.egg/otest/aus/client.py", line 90, in make_client
+    _cli.store_registration_info(resp)
+  File "/usr/local/lib/python3.7/site-packages/oic/oic/__init__.py", line 1228, in store_registration_info
+    self.client_id = reginfo["client_id"]
+  File "/usr/local/lib/python3.7/site-packages/oic/oauth2/message.py", line 773, in __getitem__
+    return self._dict[item]
+KeyError: 'client_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/lib/encoding.py", line 220, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/oidctest-0.7.5-py3.7.egg/oidctest/optt/__init__.py", line 112, in run
+    self.tester.conv.events.store(EV_FAULT, _trace)
+AttributeError: 'NoneType' object has no attribute 'events'
+[20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:25:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:25:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:25:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:25:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:25:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:25:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:25:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:25:45] ENGINE Bus STARTING
+[20/Dec/2018:16:25:45] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:25:45] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:16:25:45] ENGINE Bus STARTED
+[20/Dec/2018:16:25:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:25:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:25:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:25:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:25:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:30:00] ENGINE Bus STARTING
+[20/Dec/2018:16:30:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:30:00] ENGINE Serving on https://0.0.0.0:60001
+[20/Dec/2018:16:30:00] ENGINE Bus STARTED
+[20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:30:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:36:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:40:21] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:41:36] ENGINE Bus STARTING
+[20/Dec/2018:16:41:36] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:41:36] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:16:41:36] ENGINE Bus STARTED
+[20/Dec/2018:16:42:41] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:42:42] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:42:42] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:42:42] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:42:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:42:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:42:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:42:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:43:24] ENGINE Bus STARTING
+[20/Dec/2018:16:43:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:16:43:24] ENGINE Serving on https://0.0.0.0:60001
+[20/Dec/2018:16:43:24] ENGINE Bus STARTED
+[20/Dec/2018:16:43:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:43:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:43:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:43:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:43:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:16:44:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:17:02:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:17:02:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:02:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:17:02:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:02:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:17:02:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:17:02:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:17:02:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:17:02:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:17:02:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:02:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:17:06:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:06:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:17:07:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:17:07:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:17:43:35] ENGINE Bus STARTING
+[20/Dec/2018:17:43:35] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:17:43:35] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:17:43:35] ENGINE Bus STARTED
+[20/Dec/2018:17:48:27] ENGINE Bus STARTING
+[20/Dec/2018:17:48:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:17:48:27] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:17:48:27] ENGINE Bus STARTED
+[20/Dec/2018:18:29:13] ENGINE Bus STARTING
+[20/Dec/2018:18:29:13] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:29:13] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:18:29:13] ENGINE Bus STARTED
+[20/Dec/2018:18:33:02] ENGINE Bus STARTING
+[20/Dec/2018:18:33:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:33:07] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fe2a86e1668>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60100 not free on '0.0.0.0'
+
+[20/Dec/2018:18:33:07] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60100 not free on '0.0.0.0'",)
+
+[20/Dec/2018:18:33:07] ENGINE Bus STOPPING
+[20/Dec/2018:18:33:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) already shut down
+[20/Dec/2018:18:33:07] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:18:33:07] ENGINE Bus STOPPED
+[20/Dec/2018:18:33:07] ENGINE Bus EXITING
+[20/Dec/2018:18:33:07] ENGINE Bus EXITED
+[20/Dec/2018:18:43:12] ENGINE Error in HTTPServer.tick
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 2021, in start
+    self.tick()
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/__init__.py", line 2090, in tick
+    s, ssl_env = self.ssl_adapter.wrap(s)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/ssl_builtin.py", line 95, in wrap
+    return s, self.get_environ(s)
+  File "/usr/local/lib/python3.7/site-packages/CherryPy-8.9.1-py3.7.egg/cherrypy/wsgiserver/ssl_builtin.py", line 104, in get_environ
+    'SSL_PROTOCOL': cipher[1],
+TypeError: 'NoneType' object is not subscriptable
+
+[20/Dec/2018:18:44:04] ENGINE Bus STARTING
+[20/Dec/2018:18:44:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:44:09] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7fee36bdb6a0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 216, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/_cpserver.py", line 177, in start
+    super(Server, self).start()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/servers.py", line 169, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/servers.py", line 464, in wait_for_free_port
+    raise IOError('Port %r not free on %r' % (port, host))
+OSError: Port 60100 not free on '0.0.0.0'
+
+[20/Dec/2018:18:44:09] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 254, in start
+    self.publish('start')
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/process/wspbus.py", line 234, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: OSError("Port 60100 not free on '0.0.0.0'",)
+
+[20/Dec/2018:18:44:09] ENGINE Bus STOPPING
+[20/Dec/2018:18:44:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) already shut down
+[20/Dec/2018:18:44:09] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:18:44:09] ENGINE Bus STOPPED
+[20/Dec/2018:18:44:09] ENGINE Bus EXITING
+[20/Dec/2018:18:44:09] ENGINE Bus EXITED
+[20/Dec/2018:18:47:49] ENGINE Bus STARTING
+[20/Dec/2018:18:47:49] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:47:49] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:18:47:49] ENGINE Bus STARTED
+[20/Dec/2018:18:48:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:18:48:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:18:48:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:18:48:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:18:48:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:18:48:27] ENGINE Bus STARTING
+[20/Dec/2018:18:48:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:48:27] ENGINE Serving on https://0.0.0.0:60001
+[20/Dec/2018:18:48:27] ENGINE Bus STARTED
+[20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[20/Dec/2018:18:48:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:18:48:37] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:18:48:37] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:18:58:49] ENGINE Keyboard Interrupt: shutting down bus
+[20/Dec/2018:18:58:49] ENGINE Bus STOPPING
+[20/Dec/2018:18:58:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[20/Dec/2018:18:58:49] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:18:58:49] ENGINE Bus STOPPED
+[20/Dec/2018:18:58:49] ENGINE Bus EXITING
+[20/Dec/2018:18:58:49] ENGINE Bus EXITED
+[20/Dec/2018:18:58:49] ENGINE Waiting for child threads to terminate...
+[20/Dec/2018:18:58:51] ENGINE Bus STARTING
+[20/Dec/2018:18:58:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:18:58:51] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:18:58:51] ENGINE Bus STARTED
+[20/Dec/2018:19:01:04] ENGINE Bus STARTING
+[20/Dec/2018:19:01:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:19:01:04] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:19:01:04] ENGINE Bus STARTED
+[20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:19:09:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[20/Dec/2018:19:09:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[20/Dec/2018:19:09:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[20/Dec/2018:19:13:41] ENGINE Keyboard Interrupt: shutting down bus
+[20/Dec/2018:19:13:41] ENGINE Bus STOPPING
+[20/Dec/2018:19:13:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[20/Dec/2018:19:13:41] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:19:13:41] ENGINE Bus STOPPED
+[20/Dec/2018:19:13:41] ENGINE Bus EXITING
+[20/Dec/2018:19:13:41] ENGINE Bus EXITED
+[20/Dec/2018:19:13:41] ENGINE Waiting for child threads to terminate...
+[20/Dec/2018:19:14:56] ENGINE Bus STARTING
+[20/Dec/2018:19:14:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Dec/2018:19:14:57] ENGINE Serving on https://0.0.0.0:60100
+[20/Dec/2018:19:14:57] ENGINE Bus STARTED
+[20/Dec/2018:20:12:34] ENGINE Keyboard Interrupt: shutting down bus
+[20/Dec/2018:20:12:34] ENGINE Bus STOPPING
+[20/Dec/2018:20:12:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[20/Dec/2018:20:12:34] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Dec/2018:20:12:34] ENGINE Bus STOPPED
+[20/Dec/2018:20:12:34] ENGINE Bus EXITING
+[20/Dec/2018:20:12:34] ENGINE Bus EXITED
+[20/Dec/2018:20:12:34] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:13:27:34] ENGINE Bus STARTING
+[21/Dec/2018:13:27:35] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:13:27:35] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:13:27:35] ENGINE Bus STARTED
+[21/Dec/2018:13:27:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:13:27:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:13:27:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:13:27:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:13:27:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:14:00:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:00:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:14:00:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:00:44] ENGINE Bus STARTING
+[21/Dec/2018:14:00:45] ENGINE Serving on https://0.0.0.0:60001
+[21/Dec/2018:14:00:45] ENGINE Bus STARTED
+[21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:14:00:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:14:01:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:14:01:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:14:05:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:06:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:07:55] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:12:26] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:14:12:26] ENGINE Bus STOPPING
+[21/Dec/2018:14:12:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:14:12:26] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:26] ENGINE Bus STOPPED
+[21/Dec/2018:14:12:26] ENGINE Bus EXITING
+[21/Dec/2018:14:12:26] ENGINE Bus EXITED
+[21/Dec/2018:14:12:26] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:14:12:27] ENGINE Bus STARTING
+[21/Dec/2018:14:12:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:27] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:14:12:27] ENGINE Bus STARTED
+[21/Dec/2018:14:12:37] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:14:12:37] ENGINE Bus STOPPING
+[21/Dec/2018:14:12:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:14:12:37] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:37] ENGINE Bus STOPPED
+[21/Dec/2018:14:12:37] ENGINE Bus EXITING
+[21/Dec/2018:14:12:37] ENGINE Bus EXITED
+[21/Dec/2018:14:12:37] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:14:12:38] ENGINE Bus STARTING
+[21/Dec/2018:14:12:38] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:38] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:14:12:38] ENGINE Bus STARTED
+[21/Dec/2018:14:12:47] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:14:12:47] ENGINE Bus STOPPING
+[21/Dec/2018:14:12:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:14:12:47] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:47] ENGINE Bus STOPPED
+[21/Dec/2018:14:12:47] ENGINE Bus EXITING
+[21/Dec/2018:14:12:47] ENGINE Bus EXITED
+[21/Dec/2018:14:12:47] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:14:12:56] ENGINE Bus STARTING
+[21/Dec/2018:14:12:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:14:12:56] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:14:12:56] ENGINE Bus STARTED
+[21/Dec/2018:14:17:28] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:14:17:28] ENGINE Bus STOPPING
+[21/Dec/2018:14:17:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:14:17:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:14:17:28] ENGINE Bus STOPPED
+[21/Dec/2018:14:17:28] ENGINE Bus EXITING
+[21/Dec/2018:14:17:28] ENGINE Bus EXITED
+[21/Dec/2018:14:17:28] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:14:17:33] ENGINE Bus STARTING
+[21/Dec/2018:14:17:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:14:17:33] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:14:17:33] ENGINE Bus STARTED
+[21/Dec/2018:14:19:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:19:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:14:25:00] ENGINE Bus STARTING
+[21/Dec/2018:14:25:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:14:25:00] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:14:25:00] ENGINE Bus STARTED
+[21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:14:25:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:14:25:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:25:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:14:25:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:14:25:27] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:14:25:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:14:26:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:14:34:16] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:14:34:16] ENGINE Bus STOPPING
+[21/Dec/2018:14:34:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:14:34:16] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:14:34:16] ENGINE Bus STOPPED
+[21/Dec/2018:14:34:16] ENGINE Bus EXITING
+[21/Dec/2018:14:34:16] ENGINE Bus EXITED
+[21/Dec/2018:14:34:16] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:16:12:38] ENGINE Bus STARTING
+[21/Dec/2018:16:12:38] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:16:12:38] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:16:12:38] ENGINE Bus STARTED
+[21/Dec/2018:16:12:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:12:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:12:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:16:12:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:16:12:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:12:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:16:12:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:12:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:13:05] ENGINE Bus STARTING
+[21/Dec/2018:16:13:05] ENGINE Serving on https://0.0.0.0:60003
+[21/Dec/2018:16:13:05] ENGINE Bus STARTED
+[21/Dec/2018:16:13:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:13:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:13:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:16:13:08] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:16:13:24] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:17:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:17:31] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:17:31] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:17:31] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:16:17:31] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:16:17:32] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:16:19:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:26:48] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:16:26:48] ENGINE Bus STOPPING
+[21/Dec/2018:16:26:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:16:26:48] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:16:26:48] ENGINE Bus STOPPED
+[21/Dec/2018:16:26:48] ENGINE Bus EXITING
+[21/Dec/2018:16:26:48] ENGINE Bus EXITED
+[21/Dec/2018:16:26:48] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:16:26:52] ENGINE Bus STARTING
+[21/Dec/2018:16:26:52] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:16:26:52] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:16:26:52] ENGINE Bus STARTED
+[21/Dec/2018:16:28:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:28:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:28:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:16:28:12] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[21/Dec/2018:16:28:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:50:49] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:16:50:49] ENGINE Bus STOPPING
+[21/Dec/2018:16:50:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:16:50:49] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:16:50:49] ENGINE Bus STOPPED
+[21/Dec/2018:16:50:49] ENGINE Bus EXITING
+[21/Dec/2018:16:50:49] ENGINE Bus EXITED
+[21/Dec/2018:16:50:49] ENGINE Waiting for child threads to terminate...
+[21/Dec/2018:16:50:55] ENGINE Bus STARTING
+[21/Dec/2018:16:50:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[21/Dec/2018:16:50:55] ENGINE Serving on https://0.0.0.0:60100
+[21/Dec/2018:16:50:55] ENGINE Bus STARTED
+[21/Dec/2018:16:51:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[21/Dec/2018:16:51:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:51:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:16:51:28] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[21/Dec/2018:16:51:38] ENGINE Bus STARTING
+[21/Dec/2018:16:51:38] ENGINE Serving on https://0.0.0.0:60003
+[21/Dec/2018:16:51:38] ENGINE Bus STARTED
+[21/Dec/2018:16:51:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[21/Dec/2018:16:51:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[21/Dec/2018:19:04:13] ENGINE Keyboard Interrupt: shutting down bus
+[21/Dec/2018:19:04:13] ENGINE Bus STOPPING
+[21/Dec/2018:19:04:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[21/Dec/2018:19:04:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[21/Dec/2018:19:04:13] ENGINE Bus STOPPED
+[21/Dec/2018:19:04:13] ENGINE Bus EXITING
+[21/Dec/2018:19:04:13] ENGINE Bus EXITED
+[21/Dec/2018:19:04:13] ENGINE Waiting for child threads to terminate...
+[25/Dec/2018:09:52:33] ENGINE Bus STARTING
+[25/Dec/2018:09:52:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[25/Dec/2018:09:52:33] ENGINE Serving on https://0.0.0.0:60100
+[25/Dec/2018:09:52:33] ENGINE Bus STARTED
+[25/Dec/2018:09:53:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:09:53:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:09:53:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:09:53:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:09:53:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:09:53:55] ENGINE Bus STARTING
+[25/Dec/2018:09:53:55] ENGINE Serving on https://0.0.0.0:60003
+[25/Dec/2018:09:53:55] ENGINE Bus STARTED
+[25/Dec/2018:09:53:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:09:53:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:09:53:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:09:53:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:09:53:57] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:10:21:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:25:31] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:31:37] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:31:40] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:31:45] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:32:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:32:23] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:54:39] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:10:55:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:14:37:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:14:37:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:05:25] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[25/Dec/2018:15:05:25] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[25/Dec/2018:15:05:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:05:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:15:05:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:15:05:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:15:05:30] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:15:05:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:05:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:15:05:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:15:05:34] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:15:05:35] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:15:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:05:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:05:51] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:05:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:05:58] ENGINE Bus STARTING
+[25/Dec/2018:15:05:58] ENGINE Serving on https://0.0.0.0:60003
+[25/Dec/2018:15:05:58] ENGINE Bus STARTED
+[25/Dec/2018:15:05:58] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 1219, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 689, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 728, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 277, in readline
+    data = self.rfile.readline(256)
+  File "/usr/local/lib/python3.7/_pyio.py", line 513, in readline
+    b = self.read(nreadahead())
+  File "/usr/local/lib/python3.7/_pyio.py", line 492, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1076, in peek
+    return self._peek_unlocked(size)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1083, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:2471)
+
+[25/Dec/2018:15:05:59] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 1219, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 689, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 728, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.7/site-packages/cheroot-6.5.2-py3.7.egg/cheroot/server.py", line 277, in readline
+    data = self.rfile.readline(256)
+  File "/usr/local/lib/python3.7/_pyio.py", line 513, in readline
+    b = self.read(nreadahead())
+  File "/usr/local/lib/python3.7/_pyio.py", line 492, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1076, in peek
+    return self._peek_unlocked(size)
+  File "/usr/local/lib/python3.7/_pyio.py", line 1083, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:2471)
+
+[25/Dec/2018:15:06:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:06:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:15:06:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:15:06:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:15:06:01] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:15:06:22] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:06:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:07:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:07:26] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:15:14:04] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[25/Dec/2018:15:14:04] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[25/Dec/2018:15:14:04] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[25/Dec/2018:15:14:04] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[25/Dec/2018:15:14:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[25/Dec/2018:15:15:47] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css.map' to fulfill '/static/bootstrap/css/bootstrap.min.css.map'
+[25/Dec/2018:19:47:53] ENGINE Keyboard Interrupt: shutting down bus
+[25/Dec/2018:19:47:53] ENGINE Bus STOPPING
+[25/Dec/2018:19:47:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[25/Dec/2018:19:47:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[25/Dec/2018:19:47:53] ENGINE Bus STOPPED
+[25/Dec/2018:19:47:53] ENGINE Bus EXITING
+[25/Dec/2018:19:47:53] ENGINE Bus EXITED
+[25/Dec/2018:19:47:53] ENGINE Waiting for child threads to terminate...
+[26/Dec/2018:09:30:24] ENGINE Bus STARTING
+[26/Dec/2018:09:30:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Dec/2018:09:30:24] ENGINE Serving on https://0.0.0.0:60100
+[26/Dec/2018:09:30:24] ENGINE Bus STARTED
+[26/Dec/2018:09:30:30] ENGINE Keyboard Interrupt: shutting down bus
+[26/Dec/2018:09:30:30] ENGINE Bus STOPPING
+[26/Dec/2018:09:30:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[26/Dec/2018:09:30:30] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Dec/2018:09:30:30] ENGINE Bus STOPPED
+[26/Dec/2018:09:30:30] ENGINE Bus EXITING
+[26/Dec/2018:09:30:30] ENGINE Bus EXITED
+[26/Dec/2018:09:30:30] ENGINE Waiting for child threads to terminate...
+[26/Dec/2018:09:32:11] ENGINE Bus STARTING
+[26/Dec/2018:09:32:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Dec/2018:09:32:11] ENGINE Serving on https://0.0.0.0:60100
+[26/Dec/2018:09:32:11] ENGINE Bus STARTED
+[26/Dec/2018:09:34:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:34:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:34:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:34:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:34:29] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:09:34:38] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:34:45] ENGINE Bus STARTING
+[26/Dec/2018:09:34:45] ENGINE Serving on https://0.0.0.0:60003
+[26/Dec/2018:09:34:45] ENGINE Bus STARTED
+[26/Dec/2018:09:34:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:34:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:34:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:34:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:09:34:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:35:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:35:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:56:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:56:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:56:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:56:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:56:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:56:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:56:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:56:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:57:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:57:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:57:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:57:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:57:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:59:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:09:59:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:09:59:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:09:59:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:09:59:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:00:33] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:00:33] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:08:44] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:08:44] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:08:44] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:08:44] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:08:44] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:09:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:09:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:10:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:10:02] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:04] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:06] ENGINE socket.error 1
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 1398, in communicate
+    req.parse_request()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 601, in parse_request
+    success = self.read_request_line()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 634, in read_request_line
+    request_line = self.rfile.readline()
+  File "/usr/local/lib/python3.5/dist-packages/CherryPy-8.9.1-py3.5.egg/cherrypy/wsgiserver/__init__.py", line 303, in readline
+    data = self.rfile.readline(256)
+  File "/usr/lib/python3.5/_pyio.py", line 510, in readline
+    b = self.read(nreadahead())
+  File "/usr/lib/python3.5/_pyio.py", line 494, in nreadahead
+    readahead = self.peek(1)
+  File "/usr/lib/python3.5/_pyio.py", line 1062, in peek
+    return self._peek_unlocked(size)
+  File "/usr/lib/python3.5/_pyio.py", line 1069, in _peek_unlocked
+    current = self.raw.read(to_read)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+    v = self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1977)
+
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:09] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:15:10] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:11] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:15:11] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:15:11] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:15:11] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:18:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:18:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:18:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:18:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:18:49] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:19:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:19:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:19:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:19:03] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:19:04] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:20:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:20:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:20:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:20:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:20:05] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:29:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:46] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:48] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:54] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:29:56] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:29:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:58] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:29:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:29:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:10:30:43] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:30:43] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:30:43] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:30:43] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:10:31:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:31:52] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:31:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:31:53] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:47:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:47:59] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:48:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:48:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:48:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:10:52:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:52:14] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:52:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:10:52:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:10:52:17] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:15:28:38] ENGINE Keyboard Interrupt: shutting down bus
+[26/Dec/2018:15:28:38] ENGINE Bus STOPPING
+[26/Dec/2018:15:28:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[26/Dec/2018:15:28:38] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Dec/2018:15:28:38] ENGINE Bus STOPPED
+[26/Dec/2018:15:28:38] ENGINE Bus EXITING
+[26/Dec/2018:15:28:38] ENGINE Bus EXITED
+[26/Dec/2018:15:28:38] ENGINE Waiting for child threads to terminate...
+[26/Dec/2018:15:28:44] ENGINE Bus STARTING
+[26/Dec/2018:15:28:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Dec/2018:15:28:45] ENGINE Serving on https://0.0.0.0:60100
+[26/Dec/2018:15:28:45] ENGINE Bus STARTED
+[26/Dec/2018:15:59:13] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:15:59:13] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:15:59:13] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:15:59:13] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:15:59:13] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:15:59:16] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:15:59:16] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:15:59:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:15:59:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:15:59:23] ENGINE Bus STARTING
+[26/Dec/2018:15:59:23] ENGINE Serving on https://0.0.0.0:60003
+[26/Dec/2018:15:59:23] ENGINE Bus STARTED
+[26/Dec/2018:15:59:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:15:59:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[26/Dec/2018:15:59:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:15:59:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[26/Dec/2018:15:59:25] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
+[26/Dec/2018:16:19:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[26/Dec/2018:16:19:00] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[26/Dec/2018:18:55:29] ENGINE Keyboard Interrupt: shutting down bus
+[26/Dec/2018:18:55:29] ENGINE Bus STOPPING
+[26/Dec/2018:18:55:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 60100)) shut down
+[26/Dec/2018:18:55:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Dec/2018:18:55:29] ENGINE Bus STOPPED
+[26/Dec/2018:18:55:29] ENGINE Bus EXITING
+[26/Dec/2018:18:55:29] ENGINE Bus EXITED
+[26/Dec/2018:18:55:29] ENGINE Waiting for child threads to terminate...
+[27/Dec/2018:09:14:12] ENGINE Bus STARTING
+[27/Dec/2018:09:14:12] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Dec/2018:09:14:13] ENGINE Serving on https://0.0.0.0:60100
+[27/Dec/2018:09:14:13] ENGINE Bus STARTED
+[27/Dec/2018:09:14:18] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/css/bootstrap.min.css' to fulfill '/static/bootstrap/css/bootstrap.min.css'
+[27/Dec/2018:09:14:18] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/theme.css' to fulfill '/static/theme.css'
+[27/Dec/2018:09:14:18] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/logo.png' to fulfill '/static/logo.png'
+[27/Dec/2018:09:14:18] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/js/bootstrap.min.js' to fulfill '/static/bootstrap/js/bootstrap.min.js'
+[27/Dec/2018:09:14:19] TOOLS.STATICDIR Checking file '/usr/local/src/oidf/oidc_op/static/bootstrap/fonts/glyphicons-halflings-regular.woff2' to fulfill '/static/bootstrap/fonts/glyphicons-halflings-regular.woff2'
